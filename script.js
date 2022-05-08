@@ -12,6 +12,7 @@ const options3 = document.getElementsByClassName("option-3");
 const sendData3 = document.getElementById("send-data-3");
 const sendData4 = document.getElementById("send-data-4");
 const sendData5 = document.getElementById("send-data-5");
+const formFinal = document.getElementById("form-final")
 const arrayOptions = [];
 const arrayOptions2 = [];
 const arrayOptions3 = [];
@@ -22,13 +23,43 @@ sendData.addEventListener("click", () => {
   let apellido = document.getElementById("apellido").value;
   let sexo = document.getElementById("sexo").value;
   let fecha = document.getElementById("fecha").value;
-  if (nombre !== "" && apellido !== "" && sexo !== "" && fecha !== "") {
+
+  const calcularEdad = (fecha) => {
+    const fechaActual = new Date();
+    const anoActual = parseInt(fechaActual.getFullYear());
+    const mesActual = parseInt(fechaActual.getMonth()) + 1;
+    const diaActual = parseInt(fechaActual.getDate());
+    const anoNacimiento = fecha.slice(0, 4);
+    const mesNacimiento = fecha.slice(5, 7);
+    const diaNacimiento = fecha.slice(8, 10);
+    let edad = anoActual - anoNacimiento;
+    if (mesActual < mesNacimiento) {
+      edad--;
+    } else if (mesActual === mesNacimiento) {
+      if (diaActual < diaNacimiento) {
+        edad--;
+      }
+    }
+    return edad;
+  };
+
+  const edad = calcularEdad(fecha)
+
+  if(edad < 5 || edad > 95){
+    return alert("Faltan datos por completar o ingresó una edad incorrecta")
+  }
+
+  if(edad < 12){
+    return alert("Eres menor para realizar la encuesta")
+  }
+
+  if (nombre !== "" && apellido !== "" && sexo !== "") {
     formulario.classList.add("disabled");
     formulario2.classList.remove("disabled");
     formulario2.classList.add("form-data-2");
     nameLabel.innerHTML = "Hola, " + nombre + " " + apellido;
   } else {
-    alert("Faltan datos importantes por completar");
+    alert("Faltan datos por completar")
   }
 });
 
@@ -150,7 +181,9 @@ sendData4.addEventListener("click", () => {
 
   const p = document.createElement("p");
   p.innerHTML =
-    "¿Cuantas horas a la semana le dedica o dedicaría a " + radioButtonSelected + "?";
+    "¿Cuantas horas a la semana le dedica o dedicaría a " +
+    radioButtonSelected +
+    "?";
   formulario5.appendChild(p);
 
   for (let i = 0; i < 6; i++) {
@@ -180,3 +213,24 @@ sendData4.addEventListener("click", () => {
     formulario5.appendChild(label);
   }
 });
+
+
+sendData5.addEventListener("click", () => {
+  const radiosButton = document.getElementsByName("hours")
+  console.log(radiosButton)
+  let checked = false
+  for (let i = 0; i < radiosButton.length; i++) {
+    if(radiosButton[i].checked){
+      console.log("Checked")
+      checked = true
+    }
+  }
+
+  if(checked == false){
+   return alert("Faltan datos por completar")
+  }
+
+  formulario5.classList.add("disabled")
+  formFinal.classList.remove("disabled")
+  formFinal.classList.add("form-data-5")
+})
