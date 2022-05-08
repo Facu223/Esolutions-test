@@ -233,4 +233,13 @@ sendData5.addEventListener("click", () => {
   formulario5.classList.add("disabled")
   formFinal.classList.remove("disabled")
   formFinal.classList.add("form-data-5")
+
+  const downloadDiv = document.getElementById("download")
+  downloadDiv.classList.remove("disabled")
+
+  const mensajeFinal = document.createElement("p")
+  let nombre = document.getElementById("nombre").value;
+  mensajeFinal.innerHTML = `${nombre}, Muchas gracias por finalizar nuestra encuesta! Si haz ingresado tu email, estaremos en contacto contigo para cuando tengamos otras disponibles!`
+  formFinal.appendChild(mensajeFinal)
+
 })

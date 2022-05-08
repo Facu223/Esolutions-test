@@ -10,6 +10,20 @@ body {
   color: white;
 }
 
+.download-div {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.download-div a {
+  color: rgb(214, 196, 196);
+  font-size: 15px;
+}
+
 .title-container {
   color: white;
   display: flex;
