@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+
+body {
+  font-family: "Oswald", sans-serif;
+  font-size: larger;
+  background-image: url(images/foto.jpg);
+}
+
+.title-container {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-top: 30px;
+}
+
+.span-no-required{
+  color: rgb(153, 153, 153);
+  font-size: 15px;
+}
+
+.form-data {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  background-color: powderblue;
+  padding: 10px;
+  border-radius: 3%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.send2 {
+  padding: 10px;
+  width: 40%;
+  margin-top: 20px;
+  background-color: rgb(6, 179, 6);
+  order: 1;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.send2:hover {
+  transform: scale(1.05);
+  transition: 1s;
+}
+
+.form-data-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  margin: auto;
+  background-color: powderblue;
+  padding: 40px;
+  border-radius: 3%;
+}
+
+.form-data-2 input,
+label {
+  margin-bottom: 10px;
+}
+
+.form-data-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  margin: auto;
+  background-color: powderblue;
+  padding: 60px;
+  border-radius: 3%;
+}
+
+.form-data-3 input,
+label {
+  margin-bottom: 10px;
+}
+
+.form-data-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  margin: auto;
+  background-color: powderblue;
+  padding: 60px;
+  border-radius: 3%;
+}
+
+.form-data-4 input,
+label {
+  margin-bottom: 10px;
+}
+
+.form-data-5 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  margin: auto;
+  background-color: powderblue;
+  padding: 60px;
+  border-radius: 3%;
+}
+
+.form-data-5 input,
+label {
+  margin-bottom: 10px;
+}
+
+.form-data label {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.form-data input,
+select {
+  padding: 6px;
+  width: 40%;
+  margin: auto;
+  border: none;
+  border-radius: 3%;
+  outline: none;
+}
+
+.send {
+  color: white;
+  background-color: rgb(6, 179, 6);
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.send:hover {
+  background-color: green;
+}
+
+.disabled {
+  display: none;
+}

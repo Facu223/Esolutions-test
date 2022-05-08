@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div>
+      <div class="title-container">
+        <h3>Gaming Surveys</h3>
+        <img src="images/mario.gif">
+      </div>
+      <form class="form-data" id="form-data">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" required />
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" required />
+        <label for="direccion">Dirección (País, provincia, calle) <span class="span-no-required">No requerido</span></label>
+        <input type="text" id="direccion" />
+        <label for="sexo">Sexo</label>
+        <select id="sexo" required>
+          <option value="" disabled selected>-- Seleccione --</option>
+          <option value="m">Masculino</option>
+          <option value="f">Femenino</option>
+          <option value="u">Prefiero no decirlo</option>
+        </select>
+        <label for="email">Email <span class="span-no-required">No requerido</span></label>
+        <input type="email" id="email" required />
+        <label for="contraseña">Contraseña <span class="span-no-required">No requerido</span></label>
+        <input type="password" id="contraseña" required />
+        <label for="fecha">Fecha de nacimiento</label>
+        <input style="margin-bottom: 20px;" type="date" id="fecha" required />
+        <input id="send-data" type="button" value="Enviar" class="send"></input>
+    </form>
+    </div>
+
+    <div>
+        <form id="form-data-2" class="disabled">
+            <label id="name-label"></label>
+            <p>¿Cuales de estos juegos competitivos, considera un buen juego?</p>
+            <p>Seleccione: </p>
+            <input id="send-data-2" type="button" value="Siguiente" class="send2"></input>
+            <label>
+            <input type="checkbox" id="cbox1" value="Counter Strike: Global Ofensive (CSGO)" class="option">Counter Strike: Global Ofensive (CSGO)
+            </label>
+            <label>
+              <input type="checkbox" id="cbox2" value="League of Legends (LOL)" class="option">League of Legends (LOL)
+            </label>
+            <label>
+              <input type="checkbox" id="cbox2" value="PUBG" class="option">PUBG
+            </label>
+            <label>
+              <input type="checkbox" id="cbox2" value="DOTA 2" class="option">DOTA 2
+            </label>
+            <label>
+              <input type="checkbox" id="cbox2" value="Fortnite" class="option">Fortnite
+            </label>
+            <label>
+              <input type="checkbox" id="cbox2" value="Valorant" class="option">Valorant
+            </label>
+            <label>
+              <input type="checkbox" id="cbox2" value="Clash Royale" class="option">Clash Royale
+            </label>
+            <label>
+              <input type="checkbox" id="cbox2" value="Overwatch" class="option">Overwatch
+            </label>
+            
+        </form>
+    </div>
+
+    <div>
+      <form id="form-data-3" class="disabled">
+          <p>De acuerdo a los juegos seleccionados, ¿cuales ha jugado o juega actualmente?</p>
+          <p>Seleccione: </p>
+          <input id="send-data-3" type="button" value="Siguiente" class="send2"></input>
+      </form>
+    </div>
+
+    <div>
+      <form id="form-data-4" class="disabled">
+          <p>¿Y si tuviese que elegir solo un juego por el resto de su vida?</p>
+          <p>Seleccione: </p>
+          <input id="send-data-4" type="button" value="Siguiente" class="send2"></input>
+      </form>
+    </div>
+
+    <div>
+      <form id="form-data-5" class="disabled">
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
